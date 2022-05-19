@@ -24,6 +24,7 @@ import java.awt.event.FocusEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Registro extends JFrame {
 
@@ -146,6 +147,8 @@ public class Registro extends JFrame {
 				byte cantiHijos;
 				LocalDate fechaNacimiento;
 				
+				Persona nueva_persona = new Persona();
+				
 				ID=Integer.parseInt(txtIdPersona.getText());
 				Nombre=txtNombre.getText();
 				Apellido=txtApellido.getText();
@@ -153,7 +156,6 @@ public class Registro extends JFrame {
 				cantiHijos = Byte.parseByte(txtIdPersona.getText());
 				fechaNacimiento = LocalDate.parse(txtFecNacimiento.getText());
 				
-				//txtField.setText(String.valueof(c)); -> convertir un entero en un texto, no se si se podrá comvertir una variable en un texto
 				
 				
 				}
@@ -162,12 +164,10 @@ public class Registro extends JFrame {
 		btnNewButton.setForeground(new Color(0, 0, 0));
 		
 		btnNewButton.addActionListener(new ActionListener() {
+			ArrayList<Persona> lista_personas = new ArrayList<>();
+			
 			public void actionPerformed(ActionEvent e) {
-				if(txtIdPersona.getText().equals(null) || txtNombre.getText().equals("") || txtApellido.getText().equals("") || 
-						txtDptoResidencia.getText().equals("") || txtCantHijos.getText().equals(null) || txtFecNacimiento.getText().equals(null)); {
-					
-							JOptionPane.showMessageDialog(null,"Uno o varios campos están en blanco!");
-				}
+				
 				}
 			
 		});

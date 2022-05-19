@@ -1,6 +1,7 @@
 package Proyecto1;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class Persona {
@@ -9,8 +10,8 @@ public class Persona {
 	public String nombre;
 	public String Apellido;
 	public String dptoResidencia;
-	private byte cantHijos;
-	private LocalDate fecNacimiento;
+	public byte cantHijos;
+	public LocalDate fecNacimiento;
 	
 	
 	public Persona(int idPersona, String nombre, String apellido, String dptoResidencia, byte cantHijos,
@@ -86,6 +87,8 @@ public class Persona {
 		return "Persona [idPersona=" + idPersona + ", nombre=" + nombre + ", Apellido=" + Apellido + ", dptoResidencia="
 				+ dptoResidencia + ", cantHijos=" + cantHijos + ", fecNacimiento=" + fecNacimiento + "]";
 	}
+	
+	
 	
 	
 	public int hashCode() {

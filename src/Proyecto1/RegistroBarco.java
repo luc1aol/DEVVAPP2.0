@@ -21,6 +21,8 @@ import javax.swing.SwingConstants;
 import javax.swing.border.TitledBorder;
 import javax.swing.border.EtchedBorder;
 import javax.swing.JTextPane;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class RegistroBarco extends JFrame {
 
@@ -104,9 +106,17 @@ public class RegistroBarco extends JFrame {
 		textField_5.setColumns(10);
 		
 		JButton btnNewButton = new JButton("Aqu\u00ED");
+		btnNewButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				Inicio abrir = new Inicio();
+				abrir.setVisible(true);
+			}
+		});
 		btnNewButton.setBackground(new Color(216, 191, 216));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
 			}
 		});
 		btnNewButton.setBounds(382, 10, 93, 30);
@@ -161,6 +171,7 @@ public class RegistroBarco extends JFrame {
 		textField_3.setColumns(10);
 		
 		JTextPane txtpnBarco = new JTextPane();
+		txtpnBarco.setEditable(false);
 		txtpnBarco.setFont(new Font("Consolas", Font.BOLD, 23));
 		txtpnBarco.setText("BARCO");
 		txtpnBarco.setBackground(new Color(248, 248, 255));
